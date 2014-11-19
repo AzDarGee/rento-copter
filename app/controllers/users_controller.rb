@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to :root, notice: "Successfully Registerd"
     else
-      flash[:alert] = "Something bad happened, try again!"
+      flash.now[:alert] = "Something bad happened, try again!"
       render :new
     end
   end
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       redirect_to users_path(@user)
     else
-      flash[:alert] = "Something bad happened, try again"
+      flash.now[:alert] = "Something bad happened, try again"
       render :edit
     end
   end

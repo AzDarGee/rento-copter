@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path, :notice => "Logged in!"
     else
-      flash[:alert] = "Could not log you in, try again"
+      flash.now[:alert] = "Could not log you in, try again"
       render :new
     end
   end

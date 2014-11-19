@@ -14,6 +14,7 @@
       <% if current_user %>
         <li class="active"><%= link_to current_user.username, user_path(current_user) %></li>
         <li class="active"><%= link_to "Sign out", session_path("current"), :method => :delete %></li>
+        <li class="active"><%= link_to current_user.role.capitalize, "#" %></li>
       <% else %>
         <li class="active"><%= link_to "Register", new_user_path %></li>
         <li class="active"><%= link_to "Sign in", new_session_path %></li>

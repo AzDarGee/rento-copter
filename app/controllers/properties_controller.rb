@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  before_action :ensure_logged_in, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @properties = Property.all
   end
@@ -12,7 +14,7 @@ class PropertiesController < ApplicationController
     if @property.save
       redirect_to properties_path(@property), notice: "Successfully created your property listing"
     else
-      flash[:alert] = "Could not create your listing, try again"
+      flash.now[:alert] = "Could not create your listing, try again"
       render :new
     end
   end
@@ -30,7 +32,7 @@ class PropertiesController < ApplicationController
     if @property.update_attributes(property_params)
       redirect_to properties_path(@property)
     else
-      flash[:alert] = "Something bad happened, try again"
+      flash.now[:alert] = "Something bad happened, try again"
       render :edit
     end
   end
