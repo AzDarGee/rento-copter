@@ -30,6 +30,7 @@ class PropertiesController < ApplicationController
     if @property.update_attributes(property_params)
       redirect_to properties_path(@property)
     else
+      flash[:alert] = "Something bad happened, try again"
       render :edit
     end
   end
