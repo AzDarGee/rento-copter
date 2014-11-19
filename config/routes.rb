@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'properties#index'
 
   resources :properties
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show, :edit]
   resources :sessions, only: [:new, :create, :destroy]
 
   # Example of regular route:
