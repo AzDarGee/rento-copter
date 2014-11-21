@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121015317) do
+ActiveRecord::Schema.define(version: 20141121165202) do
 
   create_table "properties", force: true do |t|
     t.string   "title"
@@ -36,9 +36,15 @@ ActiveRecord::Schema.define(version: 20141121015317) do
   create_table "visitations", force: true do |t|
     t.datetime "start_time"
     t.datetime "end_time"
-    t.integer  "num_visitors"
+    t.integer  "property_id"
+    t.integer  "user_id"
+    t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "num_people",  default: 1
   end
+
+  add_index "visitations", ["property_id"], name: "index_visitations_on_property_id"
+  add_index "visitations", ["user_id"], name: "index_visitations_on_user_id"
 
 end

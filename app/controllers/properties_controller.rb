@@ -21,6 +21,7 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    @visitation = @property.visitations.build
   end
 
   def edit

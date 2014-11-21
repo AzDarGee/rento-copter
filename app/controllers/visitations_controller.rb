@@ -8,9 +8,12 @@ class VisitationsController < ApplicationController
   end
 
   def create
-    @visitation = Visitation.new(visitation_params)
+    @property = Property.find(params[:property_id])
+    @visitation = @property.visitations.build(visitation_params)
+    @visitation.user = current_user
+
     if @visitation.save
-      redirect_to root_path, notice: "Successfully created an appointment"
+      redirect_to @visitation.user, notice: "Successfully created an appointment"
     else
       flash.now[:alert] = "Something bad happened, try again"
       render :new
@@ -40,4 +43,9 @@ class VisitationsController < ApplicationController
     @visitation.destroy
     redirect_to root_path, notice: "Successfully removed your appointment"
   end
+
+  private
+    def visitation_params
+      params.require(:visitation).permit(:start_time,:end_time, :notes, :num_people)
+    end
 end

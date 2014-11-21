@@ -11,3 +11,23 @@
 
 <!-- VISITATION LIST -  -->
 <h2>Book your visit today</h2>
+
+<% if current_user %>
+  <h4>Book your visit at <%= @property.title %></h4>
+  <%= form_for [@property, @visitation] do |f| %>
+    <%= render 'shared/form_errors', :thing => @visitation %>
+    <div class="field">
+      <%= f.label :start_time, 'When' %>
+      <%= f.select :start_time, @property.time_slots.map{|dt| [nice_datetime(dt), dt] } %>
+    </div>
+    <div class="field">
+      <%= f.label :notes %>
+      <%= f.text_field :notes %>
+    </div>
+    <div class="field">
+      <%= f.label :num_people %>
+      <%= f.number_field :num_people, :value => 1, :min => 1 %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+<% end %>

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to :root, notice: "Successfully Registerd"
+      redirect_to :root, notice: "Successfully Registerd, welcome #{@user.username}"
     else
       flash.now[:alert] = "Something bad happened, try again!"
       render :new
@@ -14,7 +14,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    unless current_user && current_user.id == params[:id].to_i
+      redirect_to :root, :error => 'Cannot view visitations for other users'
+    end
+    @user = current_user
   end
 
   def destroy

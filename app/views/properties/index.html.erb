@@ -1,7 +1,13 @@
 <div class="large-12 columns">
-  <b><%= link_to "+ Property", new_property_path %></b>
-
+  <br>
+  <input type='text' placeholder="Search Properties"></div>
   <hr>
+
+  <% if current_user != nil %>
+    <% if current_user.role == 'owner' %>
+      <%= link_to "+ Property",  new_property_path %>
+    <% end %>
+  <% end %>
 
   <div>
     <ul class='list-group' id='properties'>

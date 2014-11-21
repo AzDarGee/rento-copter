@@ -15,10 +15,10 @@
     <%= render '/layouts/nav' %>
 
     <% if flash[:notice] %>
-      <div class="alert alert-info"><%= notice %></div>
+      <div data-alert class="alert-box success radius"><%= notice %></div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="alert alert-info"><%= alert %></div>
+      <div data-alert class="alert-box alert radius"><%= alert %></div>
     <% end %>
 
     <%= yield %>
