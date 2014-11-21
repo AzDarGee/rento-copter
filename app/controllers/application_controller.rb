@@ -19,8 +19,4 @@ class ApplicationController < ActionController::Base
     # Helper method --> makes it available everywhere
     helper_method :current_user
 
-
-
-
-
 end
