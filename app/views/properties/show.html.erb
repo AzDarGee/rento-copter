@@ -1,2 +1,10 @@
-<h1>Properties#show</h1>
-<p>Find me in app/views/properties/show.html.erb</p>
+<h1><%= @property.title %></h1>
+
+<ul>
+  <li>Rent: <%= @property.rent %></li>
+  <li>Address: <%= @property.address %></li>
+  <li>Description: <%= @property.description %></li>
+</ul>
+
+<!-- VISITATION LIST -  -->
+<h2>Book your visit today</h2>
