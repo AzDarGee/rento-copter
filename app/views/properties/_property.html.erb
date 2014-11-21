@@ -5,5 +5,5 @@
 <div class="center">Rent: $ <%= property.rent %></div>
 <div class='center'>Address: <%= property.address %></div>
 <div class="center">Description: <%= property.description %></div>
-<div class="center"><%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+<div class="center"><%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 

@@ -4,7 +4,10 @@
   <li>Rent: <%= @property.rent %></li>
   <li>Address: <%= @property.address %></li>
   <li>Description: <%= @property.description %></li>
+  <li><%= link_to "Edit", edit_property_path %></li>
 </ul>
+<hr>
+<%= link_to "Back", :back %>
 
 <!-- VISITATION LIST -  -->
 <h2>Book your visit today</h2>
