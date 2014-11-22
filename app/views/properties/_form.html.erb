@@ -1,4 +1,4 @@
-<%= form_for @property do |f| %>
+<%= form_for [@property] do |f| %>
   <fieldset>
     <legend>Property</legend>
 
@@ -14,15 +14,31 @@
   <% end %>
 
   <div>
+    <%= f.label :title %>
     <%= f.text_field :title, placeholder: "Title" %>
   </div>
   <div>
+      <%= f.label :Address %>
       <%= f.text_field :address, placeholder: "Address" %>
   </div>
   <div>
+      <%= f.label :Rent_Per_Month %>
       <%= f.text_field :rent, placeholder: "Rent/Month" %>
   </div>
   <div>
+      <%= f.label :Rooms%>
+      <%= f.number_field :num_rooms, :value => 1, :min => 1, placeholder: "Rooms" %>
+  </div>
+  <div>
+      <%= f.label :Bathrooms %>
+      <%= f.number_field :num_bathrooms, :value => 1, :min => 1, placeholder: "Bathrooms" %>
+  </div>
+  <div>
+      <%= f.label :Accomodates %>
+      <%= f.number_field :num_accomodates, :value => 1, :min => 1, placeholder: "Accomodates" %>
+  </div>
+  <div>
+      <%= f.label :description %>
       <%= f.text_area :description, placeholder: "Description", size: "24x6" %>
   </div>
   <div>

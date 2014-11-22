@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :properties do
     resources :visitations, only: :create
+    resources :addresses, only: :create
   end
 
 end
