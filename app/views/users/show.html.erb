@@ -8,6 +8,8 @@
     <h4>Role: <%= @user.role %></h4>
     <h5>DONT NEED THIS -> <%= link_to "Edit Account", edit_user_path %></h5>
 
+
+  <% if current_user && current_user.role == 'customer' %>
     <h3>My Bookings</h3>
 
     <ul>
@@ -21,7 +23,14 @@
         </li>
       <% end %>
     </ul>
+  <% end %>
 
+  <% if current_user && current_user.role == 'owner' %>
+    <h3>My Properties</h3>
+    <ul>
+        <li>properites_here</li>
+    </ul>
+  <% end %>
 
   </div>
 </div>
