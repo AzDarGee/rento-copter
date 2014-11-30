@@ -32,7 +32,7 @@
         <li><%= prop.title %></li>
         <% end %>
     </ul>
-  <% end %>
+  
 
   <h3>Scheduled Appointments:</h3>
     <ul> 
@@ -40,13 +40,14 @@
           <% if user.role == 'customer' %>
             <% if user.visitations != nil %>
               <% user.visitations.each do |visit| %>
-                <%= link_to visit.property.title, visit.property %> at Time: <%= visit.start_time %>
-                | Number of Guests Expected: <%= visit.num_people %>
+                <li><%= link_to visit.property.title, visit.property %> at Time: <%= visit.start_time %>
+                | Number of Guests Expected: <%= visit.num_people %></li>
               <% end %>
             <% end %>
           <% end %>
         <% end %>
     </ul>
 
+  <% end %>
   </div>
 </div>

@@ -4,14 +4,6 @@ $(document).on('ready page:load', function(){
 		ev.preventDefault();
 		var searchValue = $('#search').val();
 
-		// $.ajax({
-		// 	url: "/properties?search=" + searchValue,
-		// 	type: 'GET',
-		// 	dataType: 'html'
-		// }).done(function(data) {
-		// 	$('#properties').html(data);
-		// });
-
 		$.getScript("/properties?search=" + searchValue);
 
 	});
