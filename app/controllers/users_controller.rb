@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to users_path(@user)
+      redirect_to root_path
     else
       flash.now[:alert] = "Something bad happened, try again"
       render :edit

@@ -42,7 +42,7 @@ class PropertiesController < ApplicationController
   def update
     @property = Property.find(params[:id])
     if @property.update_attributes(property_params)
-      redirect_to properties_path(@property)
+      redirect_to root_path
     else
       flash.now[:alert] = "Something bad happened, try again"
       render :edit
