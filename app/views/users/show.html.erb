@@ -26,11 +26,27 @@
   <% end %>
 
   <% if current_user && current_user.role == 'owner' %>
-    <h3>My Properties</h3>
-    <ul>
-        <li>properites_here</li>
+    <h3>My Listed Properties</h3>
+    <ul> 
+        <% @user.properties.each do |prop| %>
+        <li><%= prop.title %></li>
+        <% end %>
     </ul>
   <% end %>
+
+  <h3>Scheduled Appointments:</h3>
+    <ul> 
+        <% @all_users.each do |user| %>
+          <% if user.role == 'customer' %>
+            <% if user.visitations != nil %>
+              <% user.visitations.each do |visit| %>
+                <%= link_to visit.property.title, visit.property %> at Time: <%= visit.start_time %>
+                | Number of Guests Expected: <%= visit.num_people %>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+    </ul>
 
   </div>
 </div>

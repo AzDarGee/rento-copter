@@ -10,7 +10,8 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    @property = Property.new(property_params)
+    @property = current_user.properties.build(property_params)
+    @property.user = current_user
     if @property.save
       redirect_to properties_path(@property), notice: "Successfully created your property listing"
     else

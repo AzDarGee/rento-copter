@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       redirect_to :root, :error => 'Cannot view visitations for other users'
     end
     @user = current_user
+    @all_users = User.all
   end
 
   def destroy

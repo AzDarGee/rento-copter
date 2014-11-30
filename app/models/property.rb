@@ -1,6 +1,6 @@
 class Property < ActiveRecord::Base
   has_many :visitations
-
+  belongs_to :user
 
   validates :title, :presence => true
 
@@ -48,6 +48,12 @@ class Property < ActiveRecord::Base
     end while a_time < end_time
 
     all_times
+  end
+
+  def check_visitation_time
+    current_user.visitations.each do |time|
+      
+    end
   end
 
 end
