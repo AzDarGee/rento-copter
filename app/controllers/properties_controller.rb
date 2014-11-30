@@ -2,7 +2,17 @@ class PropertiesController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @properties = Property.all
+    @properties = if params[:search]
+       Property.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
+    else
+      @properties = Property.all
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json { render json: @properties }
+    end
   end
 
   def new

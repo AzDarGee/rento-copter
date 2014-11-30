@@ -1,6 +1,9 @@
 <div class="large-12 columns">
   <br>
-  <input type='text' placeholder="Search Properties"></div>
+  <%= form_tag properties_path, method: :get, authentication: false, id: 'search-form' do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Property" %>
+  <% end %>
+</div>
   <hr>
 
   <% if current_user != nil %>

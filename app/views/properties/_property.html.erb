@@ -7,7 +7,7 @@
 <div class='center'>Rooms: <%= property.num_rooms %></div>
 <div class='center'>Bathrooms: <%= property.num_bathrooms %></div>
 <div class='center'>Accomodates: <%= property.num_accomodates %></div>
-<div class="center">Description: <%= property.description %></div>
+<div class="center">Description: <%= truncate(property.description, length: 100) %></div>
 <div class="center"><%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 <hr>
 
