@@ -11,28 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122225602) do
-
-  create_table "addresses", force: true do |t|
-    t.integer "house_num"
-    t.string  "city"
-    t.string  "province"
-    t.string  "country"
-    t.integer "property_id"
-  end
-
-  add_index "addresses", ["property_id"], name: "index_addresses_on_property_id"
+ActiveRecord::Schema.define(version: 20141130015628) do
 
   create_table "properties", force: true do |t|
     t.string   "title"
     t.float    "rent"
+    t.string   "address"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "num_rooms"
     t.integer  "num_bathrooms"
     t.integer  "num_accomodates"
-    t.string   "address"
   end
 
   create_table "users", force: true do |t|

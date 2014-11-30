@@ -1,6 +1,5 @@
 class Property < ActiveRecord::Base
   has_many :visitations
-  has_many :addresses
 
 
   validates :title, :presence => true
