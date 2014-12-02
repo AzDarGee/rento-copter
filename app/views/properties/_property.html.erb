@@ -1,13 +1,18 @@
 <div>
-  <h1><%= link_to property.title, property_path(property) %></h1>
+  <h1 id="property-title"><%= link_to property.title, property_path(property) %></h1>
 </div>
 
-<div class="center">Rent: $ <%= property.rent %></div>
-<div class='center'>Address: <%= property.address %></div>
-<div class='center'>Rooms: <%= property.num_rooms %></div>
-<div class='center'>Bathrooms: <%= property.num_bathrooms %></div>
-<div class='center'>Accomodates: <%= property.num_accomodates %></div>
-<div class="center">Description: <%= truncate(property.description, length: 100) %></div>
-<div class="center"><%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+<h2>$<%= property.rent %> / mon</h2>
+
+<h4><%= property.address %> | Rooms: <%= property.num_rooms %> | Bathrooms: <%= property.num_bathrooms %> | Accomodates: <%= property.num_accomodates %></h4>
+
+<p>
+	Description: <%= truncate(property.description, length: 100) %>
+</p>
+
+<p>
+	<%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+
 <hr>
 
