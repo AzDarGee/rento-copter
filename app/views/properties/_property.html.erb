@@ -10,9 +10,11 @@
 	Description: <%= truncate(property.description, length: 100) %>
 </p>
 
-<p>
-	<%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
+<% if current_user && current_user.role = 'owner' %>
+	<p>
+		<%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
+<% end %>
 
 <hr>
 
