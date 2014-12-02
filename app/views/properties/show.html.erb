@@ -1,43 +1,49 @@
-<div class="row">
-  <div class="small-6 large-centered columns">
-    <h1><%= @property.title %></h1>
 
-    <ul>
-      <li>Rent: <%= @property.rent %></li>
-      <li>Address: <%= @property.address %></li>
-      <li>Description: <%= @property.description %></li>
-      <li>Rooms: <%= @property.num_rooms %></li>
-      <li>Bathrooms: <%= @property.num_bathrooms %></li>
-      <li>Accomodates: <%= @property.num_accomodates %></li>
-      <%= link_to "Edit", edit_property_path %>
-    </ul>
-    <hr>
-    <%= link_to "Back", :back %>
+<h1 id="show-prop-title"><%= @property.title %><small>-<%= link_to "Edit", edit_property_path %></small></h1>
+<hr>
+<h3 id="show-prop-rent">Rent: <%= @property.rent %></h3>
+<h3 id="show-prop-address">Address: <%= @property.address %></h3>
+<h3 id="show-prop-desc">Description: <%= @property.description %></h3>
+<h3 id="show-prop-rooms">Rooms: <%= @property.num_rooms %></h3>
+<h3 id="show-prop-bathrooms">Bathrooms: <%= @property.num_bathrooms %></h3>
+<h3 id="show-prop-accomodates">Accomodates: <%= @property.num_accomodates %></h3>
 
-    <!-- VISITATION LIST -  -->
-    <% if current_user && current_user.role == 'customer' %>
-      <h3>Book your visit at <%= @property.title %></h3>
-      <%= form_for [@property, @visitation] do |f| %>
-        <%= render 'shared/form_errors', :thing => @visitation %>
-        <div class="field">
-          <%= f.label :start_time, 'When' %>
-          <%= f.select :start_time, @property.time_slots.map{|dt| [nice_datetime(dt), dt] } %>
-        </div>
-        <div class="field">
-          <%= f.label :notes %>
-          <%= f.text_field :notes %>
-        </div>
-        <div class="field">
-          <%= f.label :num_people %>
-          <%= f.number_field :num_people, :value => 1, :min => 1 %>
-        </div>
-        <div class="field">
-          <%= f.label :agent %>
-          <%= f.select :agent, [["Jordan", 'jordan'], ["Wael", 'wael'], ["Kathy", 'kathy'], ["Alexandra",'alexandra']] %>
-        </div>
-        <%= f.submit "Book Visit", class: "button" %>
-      <% end %>
-    <% end %>
+<hr>
 
-  </div>
-</div>
+<!-- VISITATION LIST -  -->
+<% if current_user && current_user.role == 'customer' %>
+  <h3>Book your visit at <%= @property.title %></h3>
+  <%= form_for [@property, @visitation] do |f| %>
+    <%= render 'shared/form_errors', :thing => @visitation %>
+    <div class="field">
+      <%= f.label :start_time, 'When' %>
+      <%= f.select :start_time, @property.time_slots.map{|dt| [nice_datetime(dt), dt] } %>
+    </div>
+    <div class="field">
+      <%= f.label :notes %>
+      <%= f.text_field :notes %>
+    </div>
+    <div class="field">
+      <%= f.label :num_people %>
+      <%= f.number_field :num_people, :value => 1, :min => 1 %>
+    </div>
+    <div class="field">
+      <%= f.label :agent %>
+      <%= f.select :agent, [["Jordan", 'jordan'], ["Wael", 'wael'], ["Kathy", 'kathy'], ["Alexandra",'alexandra']] %>
+    </div>
+    <%= f.submit "Book Visit", class: "button" %>
+  <% end %>
+  <hr>
+<% end %>
+
+
+<%= link_to "Back", :back %>
+
+
+
+   
+
+
+
+
+   
