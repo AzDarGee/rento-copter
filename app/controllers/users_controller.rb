@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to :root, notice: "Successfully Registerd, welcome #{@user.username}"
+      redirect_to new_session_path, notice: "Successfully Registerd, welcome #{@user.username}"
     else
       flash.now[:alert] = "Something bad happened, try again!"
       render :new
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to root_path
+      redirect_to @user
     else
       flash.now[:alert] = "Something bad happened, try again"
       render :edit

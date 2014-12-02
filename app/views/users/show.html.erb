@@ -19,7 +19,7 @@
           at
           <%= nice_datetime visitation.start_time %>
           (<%= pluralize(visitation.num_people, 'person') %>)
-          <%= visitation.notes %>
+          <%= visitation.notes %> | Agent: <%= visitation.agent %>
         </li>
       <% end %>
     </ul>
@@ -41,7 +41,7 @@
             <% if user.visitations != nil %>
               <% user.visitations.each do |visit| %>
                 <li><%= link_to visit.property.title, visit.property %> at Time: <%= visit.start_time %>
-                | Number of Guests Expected: <%= visit.num_people %></li>
+                | Number of Guests Expected: <%= visit.num_people %> | Agent: <%= visit.agent %></li>
               <% end %>
             <% end %>
           <% end %>

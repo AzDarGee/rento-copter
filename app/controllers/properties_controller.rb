@@ -23,7 +23,7 @@ class PropertiesController < ApplicationController
     @property = current_user.properties.build(property_params)
     @property.user = current_user
     if @property.save
-      redirect_to properties_path(@property), notice: "Successfully created your property listing"
+      redirect_to @property, notice: "Successfully created your property listing"
     else
       flash.now[:alert] = "Could not create your listing, try again"
       render :new
@@ -42,7 +42,7 @@ class PropertiesController < ApplicationController
   def update
     @property = Property.find(params[:id])
     if @property.update_attributes(property_params)
-      redirect_to root_path
+      redirect_to @property
     else
       flash.now[:alert] = "Something bad happened, try again"
       render :edit

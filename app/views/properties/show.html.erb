@@ -31,6 +31,10 @@
           <%= f.label :num_people %>
           <%= f.number_field :num_people, :value => 1, :min => 1 %>
         </div>
+        <div class="field">
+          <%= f.label :agent %>
+          <%= f.select :agent, [["Jordan", 'jordan'], ["Wael", 'wael'], ["Kathy", 'kathy'], ["Alexandra",'alexandra']] %>
+        </div>
         <%= f.submit "Book Visit", class: "button" %>
       <% end %>
     <% end %>

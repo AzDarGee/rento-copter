@@ -70,65 +70,66 @@
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
-// $include-print-styles: true;
+$include-print-styles: true;
 $include-html-global-classes: $include-html-classes;
 
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-grid-classes: $include-html-classes;
-// $include-xl-html-grid-classes: false;
+$include-html-grid-classes: $include-html-classes;
+$include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$row-width: rem-calc(1000);
+$total-columns: 12;
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+$wet-asphault : #34495e;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
-// $body-font-weight: $font-weight-normal;
-// $body-font-style: normal;
+$body-bg: $ghost;
+$body-font-color: $jet;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -192,65 +193,65 @@ $include-html-global-classes: $include-html-classes;
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-type-classes: $include-html-classes;
+$include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
-// $header-font-style: normal;
-// $header-font-color: $jet;
-// $header-line-height: 1.4;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
-// $header-text-rendering: optimizeLegibility;
+$header-font-family: $body-font-family;
+$header-font-weight: $font-weight-normal;
+$header-font-style: normal;
+$header-font-color: $jet;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10) !default;
-// $h2-font-reduction: rem-calc(10) !default;
-// $h3-font-reduction: rem-calc(5) !default;
-// $h4-font-reduction: rem-calc(5) !default;
-// $h5-font-reduction: 0 !default;
-// $h6-font-reduction: 0 !default;
+$h1-font-reduction: rem-calc(10) !default;
+$h2-font-reduction: rem-calc(10) !default;
+$h3-font-reduction: rem-calc(5) !default;
+$h4-font-reduction: rem-calc(5) !default;
+$h5-font-reduction: 0 !default;
+$h6-font-reduction: 0 !default;
 
 // These control how subheaders are styled.
-// $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: $font-weight-normal;
-// $subheader-top-margin: .2rem;
-// $subheader-bottom-margin: .5rem;
+$subheader-line-height: 1.4;
+$subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-weight: $font-weight-normal;
+$subheader-top-margin: .2rem;
+$subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-size: 60%;
+$small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
-// $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
-// $paragraph-aside-font-size: rem-calc(14);
-// $paragraph-aside-line-height: 1.35;
-// $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
+$paragraph-font-family: inherit;
+$paragraph-font-weight: $font-weight-normal;
+$paragraph-font-size: 1rem;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: rem-calc(20);
+$paragraph-aside-font-size: rem-calc(14);
+$paragraph-aside-line-height: 1.35;
+$paragraph-aside-font-style: italic;
+$paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-// $code-color: $oil;
-// $code-font-family: $font-family-monospace;
-// $code-font-weight: $font-weight-normal;
-// $code-background-color: scale-color($secondary-color, $lightness: 70%);
-// $code-border-size: 1px;
-// $code-border-style: solid;
-// $code-border-color: scale-color($code-background-color, $lightness: -10%);
-// $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+$code-color: $oil;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $font-weight-normal;
+$code-background-color: scale-color($secondary-color, $lightness: 70%);
+$code-border-size: 1px;
+$code-border-style: solid;
+$code-border-color: scale-color($code-background-color, $lightness: -10%);
+$code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
@@ -259,24 +260,24 @@ $include-html-global-classes: $include-html-classes;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
-// $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
-// $hr-margin: rem-calc(20);
+$hr-border-width: 2px;
+$hr-border-style: solid;
+$hr-border-color: $gainsboro;
+$hr-margin: rem-calc(20);
 
 // We use these to style lists
-// $list-font-family: $paragraph-font-family;
-// $list-font-size: $paragraph-font-size;
-// $list-line-height: $paragraph-line-height;
-// $list-margin-bottom: $paragraph-margin-bottom;
-// $list-style-position: outside;
-// $list-side-margin: 1.1rem;
-// $list-ordered-side-margin: 1.4rem;
-// $list-side-margin-no-bullet: 0;
-// $list-nested-margin: rem-calc(20);
-// $definition-list-header-weight: $font-weight-bold;
-// $definition-list-header-margin-bottom: .3rem;
-// $definition-list-margin-bottom: rem-calc(12);
+$list-font-family: $paragraph-font-family;
+$list-font-size: $paragraph-font-size;
+$list-line-height: $paragraph-line-height;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-position: outside;
+$list-side-margin: 1.1rem;
+$list-ordered-side-margin: 1.4rem;
+$list-side-margin-no-bullet: 0;
+$list-nested-margin: rem-calc(20);
+$definition-list-header-weight: $font-weight-bold;
+$definition-list-header-margin-bottom: .3rem;
+$definition-list-margin-bottom: rem-calc(12);
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
@@ -1360,16 +1361,16 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $wet-asphault;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: 65px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(35);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
@@ -1381,31 +1382,31 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: #272727;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: $topbar-height / 3;
-// $topbar-back-link-size: $h5-font-size;
-// $topbar-link-dropdown-padding: 20px;
+$topbar-link-color: $vapor;
+$topbar-link-color-hover: $white;
+$topbar-link-color-active: $white;
+$topbar-link-color-active-hover: $white;
+$topbar-link-weight: $font-weight-normal;
+$topbar-link-font-size: rem-calc(20);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg: $topbar-bg;
+$topbar-link-bg-color-hover: $charcoal;
+$topbar-link-bg-hover: #272727;
+$topbar-link-bg-active: $primary-color;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-font-family: $body-font-family;
+$topbar-link-text-transform: none;
+$topbar-link-padding: $topbar-height / 3;
+$topbar-back-link-size: $h5-font-size;
+$topbar-link-dropdown-padding: 20px;
 
-// $topbar-button-font-size: 0.75rem;
+// $topbar-button-font-size: 5.75rem;
 // $topbar-button-top: 7px;
 
 // $topbar-dropdown-label-color: $monsoon;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
+// $topbar-dropdown-label-font-size: rem-calc(20);
 // $topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles

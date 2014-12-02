@@ -6,12 +6,6 @@
 </div>
   <hr>
 
-  <% if current_user != nil %>
-    <% if current_user.role == 'owner' %>
-      <%= link_to "+ Property",  new_property_path %>
-    <% end %>
-  <% end %>
-
   <div>
     <ul class='list-group' id='properties'>
       <%= render @properties %>
