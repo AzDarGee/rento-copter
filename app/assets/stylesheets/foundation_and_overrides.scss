@@ -625,14 +625,14 @@ $definition-list-margin-bottom: rem-calc(12);
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+// $input-font-size: rem-calc(40);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
 // $input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+// $input-border-width: 2px;
+// $input-border-radius: 25px;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -1441,3 +1441,8 @@ $topbar-link-dropdown-padding: 20px;
 // $include-accessibility-classes: true;
 
 @import 'foundation';
+
+#search {
+	height: 60px;
+	font-size: 30px;
+}

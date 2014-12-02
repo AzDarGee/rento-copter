@@ -1,7 +1,7 @@
 <div class="large-12 columns">
   <br>
   <%= form_tag properties_path, method: :get, authentication: false, id: 'search-form' do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Property" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Property", class: "search-input" %>
   <% end %>
 </div>
   <hr>
