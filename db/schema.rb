@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202173350) do
+ActiveRecord::Schema.define(version: 20141203004124) do
 
   create_table "properties", force: true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141202173350) do
     t.integer  "num_bathrooms"
     t.integer  "num_accomodates"
     t.integer  "user_id"
+    t.string   "type_prop"
   end
 
   create_table "users", force: true do |t|

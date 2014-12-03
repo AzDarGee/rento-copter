@@ -123,9 +123,12 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 $wet-asphault : #34495e;
+$silver2	 :#bdc3c7;
+$clouds		  :#ecf0f1;
+$belizole	:#2980b9;
 
 // We use these to control various global styles
-$body-bg: $ghost;
+$body-bg: $white-smoke;
 $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
@@ -1484,4 +1487,8 @@ $topbar-link-dropdown-padding: 20px;
 #show-prop-accomodates{
 	font-size: 40px;
 	padding-left: 150px;
+}
+
+#show-prop-back-link {
+	padding-left: 50px;
 }

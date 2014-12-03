@@ -4,13 +4,13 @@
 
 <h2>$<%= property.rent %> / mon</h2>
 
-<h4><%= property.address %> | Rooms: <%= property.num_rooms %> | Bathrooms: <%= property.num_bathrooms %> | Accomodates: <%= property.num_accomodates %></h4>
+<h4><%= property.address %> | <%= property.type_prop %> | Rooms: <%= property.num_rooms %> | Bathrooms: <%= property.num_bathrooms %> | Accomodates: <%= property.num_accomodates %></h4>
 
 <p>
 	Description: <%= truncate(property.description, length: 100) %>
 </p>
 
-<% if current_user && current_user.role = 'owner' %>
+<% if current_user && current_user.role == 'owner' %>
 	<p>
 		<%= link_to "Edit", edit_property_path(property) %> | <%= link_to 'Delete',property, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</p>

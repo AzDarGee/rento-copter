@@ -26,6 +26,10 @@
       <%= f.text_field :rent, placeholder: "Rent/Month" %>
   </div>
   <div>
+    <%= f.label "House Type"%>
+    <%= f.select :type_prop, [["Condo", 'condo'], ["Town House", 'townhouse'], ["Single Home", 'single'], ["Bungalow",'bungalow'], ["Apartment", "apartment"]] %>
+  </div>
+  <div>
       <%= f.label :Rooms%>
       <%= f.number_field :num_rooms, :value => 1, :min => 1, placeholder: "Rooms" %>
   </div>

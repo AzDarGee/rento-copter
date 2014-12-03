@@ -2,6 +2,7 @@ class PropertiesController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create, :edit, :update, :destroy]
 
   def index
+    @property = Property.new
     @properties = if params[:search]
        Property.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
     else
@@ -13,6 +14,8 @@ class PropertiesController < ApplicationController
       format.js
       format.json { render json: @properties }
     end
+
+
   end
 
   def new
@@ -60,6 +63,6 @@ class PropertiesController < ApplicationController
 
   private
     def property_params
-      params.require(:property).permit(:title,:description,:address,:rent, :num_rooms, :num_bathrooms,:num_accomodates)
+      params.require(:property).permit(:title,:description,:address,:rent, :num_rooms, :num_bathrooms,:num_accomodates, :type_prop)
     end
 end
