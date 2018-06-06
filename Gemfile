@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+gem 'pg', '~> 0.18'
 gem 'spring',        group: :development
 gem 'foundation-rails', '5.4.3.1'
 gem 'bcrypt'
@@ -16,10 +16,8 @@ gem 'bcrypt'
 
 group :development do
   gem 'sqlite3'
-  gem 'pg', '~> 0.18'
 end
 
 group :production do
-  gem 'pg', '~> 0.18'
   gem 'rails_12factor'
 end
