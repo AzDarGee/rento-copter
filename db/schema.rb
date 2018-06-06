@@ -13,10 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20141203004124) do
 
-  create_table "properties", force: true do |t|
-    t.string   "title"
+  create_table "properties", force: :cascade do |t|
+    t.string   "title",           limit: 255
     t.float    "rent"
-    t.string   "address"
+    t.string   "address",         limit: 255
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,29 +24,29 @@ ActiveRecord::Schema.define(version: 20141203004124) do
     t.integer  "num_bathrooms"
     t.integer  "num_accomodates"
     t.integer  "user_id"
-    t.string   "type_prop"
+    t.string   "type_prop",       limit: 255
   end
 
-  create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "role"
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name",      limit: 255
+    t.string   "last_name",       limit: 255
+    t.string   "username",        limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.string   "role",            limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "visitations", force: true do |t|
+  create_table "visitations", force: :cascade do |t|
     t.datetime "start_time"
     t.integer  "property_id"
     t.integer  "user_id"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "num_people",  default: 1
-    t.string   "agent"
+    t.integer  "num_people",              default: 1
+    t.string   "agent",       limit: 255
   end
 
   add_index "visitations", ["property_id"], name: "index_visitations_on_property_id"
